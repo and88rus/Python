@@ -2,10 +2,9 @@ def print_hi():
     print()
 if __name__ == '__main__':
     print_hi()
-    print ("Введите день недели:")
-    s = input()
-    if (((int(s))==1) or ((int(s))==2) or ((int(s))==3) or ((int(s))==4) or ((int(s))==5)):
+    d = input("День недели:")
+    if (((int(d))==1) or ((int(d))==2) or ((int(d))==3) or ((int(d))==4) or ((int(d))==5)):
      print ("это будний день")
-    elif (((int(s))==6) or (int(s)==7)): 
+    elif (((int(d))==6) or (int(d)==7)): 
      print ("это выходной день")
 
