@@ -2,15 +2,12 @@ def print_hi():
     print()
 if __name__ == '__main__':
     print_hi()
-    x = input("x=")
-    y = input("y=")
-    if (((int(x))>0 and ((int(y))>0))):
-     print ("I")
-    elif (((int(x))<0 and ((int(y))>0))): 
-     print ("II")
-    elif (((int(x))<0 and ((int(y))<0))): 
-     print ("III")
-    elif (((int(x))>0 and ((int(y))<0))): 
-     print ("IV")
-    elif (((int(x))==0 and ((int(y))==0))): 
-     print ("четверть неопределена")
+    c = input("Четверть:")
+    if (int(c)==1):
+     print ("x>0","y>0")
+    elif (int(c)==2): 
+     print ("x<0","y>0")
+    elif (int(c)==3): 
+     print ("x<0","y<0")
+    elif (int(c)==4): 
+     print ("x>0","y<0")
