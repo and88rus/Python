@@ -5,12 +5,16 @@ if __name__ == '__main__':
     x = input("x=")
     y = input("y=")
     if (((int(x))>0 and ((int(y))>0))):
-     print ("I")
+     print ("I четверть")
     elif (((int(x))<0 and ((int(y))>0))): 
-     print ("II")
+     print ("II четверть")
     elif (((int(x))<0 and ((int(y))<0))): 
-     print ("III")
+     print ("III четверть")
     elif (((int(x))>0 and ((int(y))<0))): 
-     print ("IV")
-    elif (((int(x))==0 and ((int(y))==0))): 
-     print ("четверть неопределена")
+     print ("IV четверть")
+    elif (((int(x))==0) and (((int(y))>0) or ((int(y))<0))): 
+     print ("ось Y")
+    elif (((int(y))==0) and (((int(x))>0) or ((int(x))<0))): 
+     print (" ось X")
+    elif (((int(y))==0) and (((int(x))==0))): 
+     print ("четверть неопределена, расположение на пересечении оси X и Y")
