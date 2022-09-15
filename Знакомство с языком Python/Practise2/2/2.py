@@ -5,8 +5,8 @@ if __name__ == '__main__':
     s = input("N=")
     p=[]
     m=[i+1 for i in range (int(s))]
-    sum=1
+    pr=1
     for i in range(int(s)):
-        sum*=m[i]
-        p.append(sum)
+        pr*=m[i]
+        p.append(pr)
     print(p)
