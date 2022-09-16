@@ -17,8 +17,8 @@ def SumOfSymb(a):
     for i in range (0,size,1):
         sum=sum+m[i]
     return sum
-n=float(input("n="))
+n=float(input("n = "))
 while (float.is_integer(n)==False):
      n*=10
-print (SumOfSymb(int(n)))
+print ("Сумма цифр числа n - ", SumOfSymb(int(n)))
 
