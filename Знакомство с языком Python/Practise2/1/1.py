@@ -1,3 +1,4 @@
+from decimal import Decimal
 from array import*
 def print_hi():
     print()
@@ -18,7 +19,9 @@ def SumOfSymb(a):
         sum=sum+m[i]
     return sum
 n=float(input("n = "))
-while (float.is_integer(n)==False):
-     n*=10
-print ("Сумма цифр числа n - ", SumOfSymb(int(n)))
+N=n
+while ((float.is_integer(n))==False):
+     n=Decimal(str(n))*10
+     n=float(n)
+print (f'Сумма цифр числа {N} - ', SumOfSymb(int(n)))
 
