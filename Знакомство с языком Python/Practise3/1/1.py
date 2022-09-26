@@ -5,7 +5,7 @@ if __name__ == '__main__':
 def CreationOfMassive(s, L):
    print (" ")
    for i in range(int(s)):
-     elem=int(input(("L[i] = ")))
+     elem=int(input((f'L[{i}] = ')))
      L.append(elem)
 def OutPutOfMassive(s,L):
     print (" ")

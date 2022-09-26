@@ -7,7 +7,7 @@ def RandomElemInLem(s):
     L=[]
     print (" ")
     for i in range(int(s)): 
-      elem=int(input(("L[i] = ")))
+      elem=int(input((f'L[{i}] = ')))
       L.append(elem)
     print (" ")
     print (L)
