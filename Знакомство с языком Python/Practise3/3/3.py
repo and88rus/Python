@@ -31,8 +31,8 @@ def MaxOfL2(s,L2):
 L1=[]
 L2=[]
 s=int(input("Размер списка: "))
-CreationOfListL1(s,L1)
-OutPutOfListL1 (s,L1) 
+CreationOfListL1(s, L1)
+OutPutOfListL1 (s, L1) 
 CreationOfListL2(s, L1, L2)
 print (" ")
-print (abs(MaxOfL2(s,L2)-MinOfL2(s,L2)))
+print (abs(MaxOfL2(s, L2)-MinOfL2(s, L2)))
