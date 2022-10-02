@@ -3,6 +3,10 @@ def print_hi():
     print()
 if __name__ == '__main__':
     print_hi()
+
+
+
+    
     def DistanceBetween2Points(x1,x2,y1,y2):
         d=(math.pow((x2-x1),2)+math.pow((y2-y1),2))**0.5
         return d

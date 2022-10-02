@@ -3,11 +3,15 @@ def print_hi():
     print()
 if __name__ == '__main__':
     print_hi()
+
+
+
+
 def RandomElemInLem(s):
-    L=[]
+    L = []
     print (" ")
     for i in range(int(s)): 
-      elem=int(input((f'L[{i}] = ')))
+      elem = int(input((f'L[{i}] = ')))
       L.append(elem)
     print (" ")
     print (L)
@@ -15,6 +19,10 @@ def RandomElemInLem(s):
     random.shuffle (L)
     print (L)
     print (" ")
-s=int(input("Размер списка: "))
+
+
+
+
+s = int(input("Размер списка: "))
 print (" ")
 RandomElemInLem(s)

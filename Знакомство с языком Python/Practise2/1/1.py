@@ -1,9 +1,17 @@
 from decimal import Decimal
 from array import*
+
+
+
+
 def print_hi():
     print()
 if __name__ == '__main__':
     print_hi()
+
+
+
+
 def SumOfSymb(a):
     c=a
     size =2
@@ -18,6 +26,10 @@ def SumOfSymb(a):
     for i in range (0,size,1):
         sum=sum+m[i]
     return sum
+
+
+
+
 n=float(input("n = "))
 N=n
 while ((float.is_integer(n))==False):
