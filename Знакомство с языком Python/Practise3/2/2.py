@@ -1,38 +1,40 @@
-from decimal import Decimal
-import math
 def print_hi():
     print()
 if __name__ == '__main__':
     print_hi()
-def CreationOfListL1(s, L1):
-   print (" ")
-   for i in range(int(s)):
-     elem=float(input((f'L[{i}] = ')))
-     L1.append(elem)
-def OutPutOfListL1(s,L1):
-    print (" ")
-    print (str(L1).strip('[]'))
-def CreationOfListL2(s, L1, L2):
-    for i in range (int(s)):
-        elem=float(Decimal(str(L1[i]))-int(float(str(L1[i]))))
+def CreationOfL(size1,L):
+     print (" ")
+     for i in range(int(size1)):
+      elem=int(input((f'L[{i}] = ')))
+      L.append(elem)
+def CreationOfL1(size1,L,size2,L1):
+ if (size2%2==1):
+    for i in range(int(size1)-1,size2-2,-1):
+        elem=L[i]
+        L1.append(elem)
+ if (size2%2==0):
+    for i in range(int(size1)-1,size2-1,-1):
+        elem=L[i]
+        L1.append(elem)
+def CreationOfL2(size2,L,L1,L2):
+    for i in range(size2):
+        elem=L1[i]
         L2.append(elem)
-def MinOfL2(s,L2):
-    min=L2[0]
-    for i in range (int(s)):
-     if ((L2[i]<min)&(L2[i]!=0.0)):
-        min=L2[i]
-    return (min)
-def MaxOfL2(s,L2):
-    max=L2[0]
-    for i in range (int(s)):
-     if (L2[i]>max):
-        max=L2[i]
-    return (max)
+    for i in range (size2):
+        L2[i]*=L[i]
+def OutPutOfL2(size1,L2):
+    print (" ")
+    print (str(L2).strip('[]'))
+L=[]
 L1=[]
 L2=[]
-s=int(input("Размер списка: "))
-CreationOfListL1(s,L1)
-OutPutOfListL1 (s,L1) 
-CreationOfListL2(s, L1, L2)
-print (" ")
-print (abs(MaxOfL2(s,L2)-MinOfL2(s,L2)))
+size1=int(input("Размер списка: "))
+size2=0
+if (size1%2==0): 
+ size2=size1//2
+elif (size1%2==1):
+    size2=size1//2+1
+CreationOfL(size1,L)
+CreationOfL1(size1,L,size2,L1)
+CreationOfL2(size2,L,L1,L2)
+OutPutOfL2(size1,L2)
