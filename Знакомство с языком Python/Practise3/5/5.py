@@ -1,26 +1,25 @@
+import math
 def print_hi():
     print()
 if __name__ == '__main__':
     print_hi()
-def CreationOfMassive(s, L):
-   print (" ")
-   for i in range(int(s)):
-     elem=int(input((f'L[{i}] = ')))
+def Fibonacci(n):
+    if (n>=2):
+        return Fibonacci(n-1)+Fibonacci(n-2)
+    elif (n==1):
+        return 1
+    elif (n==0):
+        return 0
+    elif (n<0):
+        return int(math.pow(-1,(-1*n+1))*Fibonacci(-1*n))
+def CreatingOfFibonacciArray(n,L):
+    for i in range (-int(n),int(n)+1,+1):
+     elem=Fibonacci(i)
      L.append(elem)
-def OutPutOfMassive(s,L):
-    print (" ")
-    print (str(L).strip('[]'))
-def SumOfElem(s, L):
-    sum=0
-    for i in range(int(s)): 
-          if (i%2==1):
-            sum+=L[i]
-    print (" ")
-    print ("Сумма элементов на нечетных позициях:")
-    print (" ")
-    print (sum)
+def OutPutOfL(L):
+   print (" ")
+   print (str(L).strip('[]')) 
 L=[]
-s=int(input("Размер списка: "))
-CreationOfMassive(s,L)
-OutPutOfMassive (s,L)
-SumOfElem(s, L)
+n=int(input("k = "))
+CreatingOfFibonacciArray(n,L)
+OutPutOfL(L)
