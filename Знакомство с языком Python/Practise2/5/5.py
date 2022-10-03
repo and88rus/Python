@@ -7,7 +7,7 @@ if __name__ == '__main__':
 
 
 
-def RandomElemInLem(s):
+def random_elem_in_L(s):
     L = []
     print (" ")
     for i in range(int(s)): 
@@ -25,4 +25,4 @@ def RandomElemInLem(s):
 
 s = int(input("Размер списка: "))
 print (" ")
-RandomElemInLem(s)
+random_elem_in_L(s)

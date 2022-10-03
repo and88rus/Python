@@ -12,7 +12,7 @@ if __name__ == '__main__':
 
 
 
-def SumOfSymb(a):
+def sum_of_symb(a):
     c=a
     size =2
     while ((a>=10)):
@@ -35,5 +35,5 @@ N=n
 while ((float.is_integer(n))==False):
      n=Decimal(str(n))*10
      n=float(n)
-print (f'Сумма цифр числа {N} - ', SumOfSymb(int(n)))
+print (f'Сумма цифр числа {N} - ', sum_of_symb(int(n)))
 
