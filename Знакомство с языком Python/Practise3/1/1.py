@@ -6,7 +6,7 @@ if __name__ == '__main__':
 
 
 
-def CreationOfMassive(s, L):
+def creation_of_massive(s, L):
    print (" ")
    for i in range(int(s)):
      elem = int(input((f'L[{i}] = ')))
@@ -37,6 +37,6 @@ def SumOfElem(s, L):
 
 L = []
 s = int(input("Размер списка: "))
-CreationOfMassive(s, L)
+creation_of_massive(s, L)
 OutPutOfMassive (s, L)
 SumOfElem(s, L)

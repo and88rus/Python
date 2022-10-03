@@ -12,7 +12,7 @@ if __name__ == '__main__':
 
 
 
-def CreationOfListL1(s, L1):
+def creation_of_L1(s, L1):
    print (" ")
    for i in range(int(s)):
      elem = float(input((f'L[{i}] = ')))
@@ -21,14 +21,14 @@ def CreationOfListL1(s, L1):
 
 
 
-def OutPutOfListL1(s, L1):
+def output_of_L1(s, L1):
     print (" ")
     print (str(L1).strip('[]'))
 
 
 
 
-def CreationOfListL2(s, L1, L2):
+def creation_of_L2(s, L1, L2):
     for i in range (int(s)):
         elem = float(Decimal(str(L1[i])) - int(float(str(L1[i]))))
         L2.append(elem)
@@ -36,7 +36,7 @@ def CreationOfListL2(s, L1, L2):
 
 
 
-def MinOfL2(s, L2):
+def min_of_L2(s, L2):
     min = L2[0]
     for i in range (int(s)):
      if ((L2[i] < min) & (L2[i] != 0.0)):
@@ -46,7 +46,7 @@ def MinOfL2(s, L2):
 
 
 
-def MaxOfL2(s, L2):
+def max_of_L2(s, L2):
     max = L2[0]
     for i in range (int(s)):
      if (L2[i] > max):
@@ -59,8 +59,8 @@ def MaxOfL2(s, L2):
 L1 = []
 L2 = []
 s = int(input("Размер списка: "))
-CreationOfListL1(s, L1)
-OutPutOfListL1 (s, L1) 
-CreationOfListL2(s, L1, L2)
+creation_of_L1(s, L1)
+output_of_L1 (s, L1) 
+creation_of_L2(s, L1, L2)
 print (" ")
-print (abs(MaxOfL2(s, L2) - MinOfL2(s, L2)))
+print (abs(max_of_L2(s, L2) - min_of_L2(s, L2)))

@@ -11,28 +11,28 @@ if __name__ == '__main__':
 
 
 
-def Fibonacci(n):
+def fibonacci(n):
     if (n >= 2):
-        return Fibonacci(n - 1) + Fibonacci(n - 2)
+        return fibonacci(n - 1) + fibonacci(n - 2)
     elif (n == 1):
         return 1
     elif (n == 0):
         return 0
     elif (n < 0):
-        return int(math.pow(-1,(-1 * n + 1)) * Fibonacci(-1 * n))
+        return int(math.pow(-1,(-1 * n + 1)) * fibonacci(-1 * n))
 
 
 
 
-def CreatingOfFibonacciArray(n, L):
+def creating_of_fibonacci_list(n, L):
     for i in range (-int(n), int(n) + 1, +1):
-     elem = Fibonacci(i)
+     elem = fibonacci(i)
      L.append(elem)
 
 
 
 
-def OutPutOfL(L):
+def output_of_L(L):
    print (" ")
    print (str(L).strip('[]')) 
 
@@ -41,5 +41,5 @@ def OutPutOfL(L):
 
 L = []
 n = int(input("k = "))
-CreatingOfFibonacciArray(n, L)
-OutPutOfL(L)
+creating_of_fibonacci_list(n, L)
+output_of_L(L)
