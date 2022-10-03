@@ -11,7 +11,7 @@ if __name__ == '__main__':
 
 
 
-    def Pi(d):
+    def pi(d):
         k = 0
         while ((float.is_integer(d)) == False):
          d *= 10
@@ -24,6 +24,6 @@ if __name__ == '__main__':
     d = float(input("d = "))
     print (" ")
     if (0.00000000001 <= d <= 0.1):
-     print (f'Pi = {Pi(d)} c точностью d = {float(d)}')
+     print (f'Pi = {pi(d)} c точностью d = {float(d)}')
     else: 
      print ("d > 0.1 or d < 0.00000000001")

@@ -6,7 +6,7 @@ if __name__ == '__main__':
 
 
 
-def CreationOfL(size1, L):
+def creation_of_L(size1, L):
      print (" ")
      for i in range(int(size1)):
       elem = int(input((f'L[{i}] = ')))
@@ -15,7 +15,7 @@ def CreationOfL(size1, L):
 
 
 
-def CreationOfL1(size1, L, size2, L1):
+def creation_of_L1(size1, L, size2, L1):
  if (size2%2 == 1):
     for i in range(int(size1)-1, size2-2, -1):
         elem = L[i]
@@ -28,7 +28,7 @@ def CreationOfL1(size1, L, size2, L1):
 
 
 
-def CreationOfL2(size2, L, L1, L2):
+def creation_of_L2(size2, L, L1, L2):
     for i in range(size2):
         elem = L1[i]
         L2.append(elem)
@@ -38,7 +38,7 @@ def CreationOfL2(size2, L, L1, L2):
 
 
 
-def OutPutOfL2(size1, L2):
+def out_put_of_L2(size1, L2):
     print (" ")
     print (str(L2).strip('[]'))
 
@@ -54,7 +54,7 @@ if (size1%2 == 0):
  size2 = size1 // 2
 elif (size1%2 == 1):
     size2 = size1 // 2 + 1
-CreationOfL(size1, L)
-CreationOfL1(size1, L, size2, L1)
-CreationOfL2(size2, L, L1, L2)
-OutPutOfL2(size1, L2)
+creation_of_L(size1, L)
+creation_of_L1(size1, L, size2, L1)
+creation_of_L2(size2, L, L1, L2)
+out_put_of_L2(size1, L2)
