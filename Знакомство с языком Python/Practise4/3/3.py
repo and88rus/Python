@@ -11,13 +11,6 @@ def creation_of_L(L, n):
     for i in range(int(n)):
      elem = int(input((f'L[{i}] = ')))
      L.append(elem)
-    
-
-
-
-def out_put_of_L(L, n):
-    print (" ")
-    print (str(L).strip('[]'))
 
 
 
@@ -30,16 +23,12 @@ def cout_of_L(L, L1, n):
 
 
 
-def out_put_of_L1(L1, n):
-    print (" ")
-    print (str(L1).strip('[]'))
-
-
-
 L = []
 L1 = []
 n = int(input("Размер списка: "))  
 creation_of_L(L, n)
-out_put_of_L(L, n)
+print (" ")
+print (L)
 cout_of_L(L, L1, n)
-out_put_of_L1(L1, n)
+print (" ")
+print (L1)
