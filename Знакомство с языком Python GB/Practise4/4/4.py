@@ -5,7 +5,7 @@ if __name__ == '__main__':
 
 
 
-
-data = open("file.txt","+w")
-data.writelines ("Hello!aaaaaaa!")
+x= f'{int(2)}{"x"}{""}{""}'+f'{int(2)}{"x"}{""}{""}'
+data = open("file.txt","w")
+data.writelines (x)
 data.close
