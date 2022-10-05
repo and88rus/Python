@@ -6,6 +6,6 @@ if __name__ == '__main__':
 
 
 
-data = open('file.txt','w+')
-data.writelines ("Hello")
+data = open("file.txt","+w")
+data.writelines ("Hello!aaaaaaa!")
 data.close
