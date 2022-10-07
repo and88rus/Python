@@ -5,7 +5,10 @@ if __name__ == '__main__':
 
 
 
-x= f'{int(2)}{"x"}{""}{""}'+f'{int(2)}{"x"}{""}{""}'
-data = open("file.txt","w")
-data.writelines (x)
-data.close
+class monom:
+ pass
+
+L=[]
+s = int(input())
+for i in range (0, int(s)):
+    L[i]=monom()
