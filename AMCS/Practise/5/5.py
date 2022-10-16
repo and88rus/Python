@@ -13,15 +13,15 @@ if __name__ == '__main__':
 
 def roots(a,b,c):
     if ((math.pow (b,2)-4*a*c)>0):
-       x1=(-b+math.sqrt(pow (b,2)-4*a*c))//2*a
-       x2=(-b-math.sqrt(pow (b,2)-4*a*c))//2*a
+       x1=(-b+math.sqrt(pow (b,2)-4*a*c))/2*a
+       x2=(-b-math.sqrt(pow (b,2)-4*a*c))/2*a
        return print("x1  = ",x1," ","x2  = ",x2)
 
 
 
 
     elif ((math.pow (b,2)-4*a*c)==0): 
-         x=(-1)*b//2*a
+         x=(-1)*b/2*a
          return print ("x0  = ",x)
 
 
