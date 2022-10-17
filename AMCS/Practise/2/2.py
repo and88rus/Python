@@ -55,3 +55,23 @@ creation_of_L(L,n,a,b)
 
 
 output_of_L (L)
+
+
+
+
+# def sort_of_L(L,n): 
+
+
+
+
+# output_of_L (L)
+
+
+
+
+# def sort_of_L(L,n):
+
+
+
+
+# output_of_L (L)
