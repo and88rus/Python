@@ -59,11 +59,11 @@ n = int(input("n = "))
 print (" ")
 
 
-a = int(input("a = "))
+a = float(input("a = "))
 print (" ")
 
 
-b = int(input("b = "))
+b = float(input("b = "))
 print (" ")
 
 
