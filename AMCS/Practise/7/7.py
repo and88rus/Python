@@ -11,8 +11,10 @@ if __name__ == '__main__':
 
 
 
+
 def f(x):
     return math.sqrt(x)*math.sin(x)
+
 
 
 
@@ -21,13 +23,16 @@ def df(x,e):
 
 
 
+
 x = int(input("x0 = "))
 print (" ")
 
 
 
+
 e = int(input("e = "))
 print (" ")
+
 
 
 
