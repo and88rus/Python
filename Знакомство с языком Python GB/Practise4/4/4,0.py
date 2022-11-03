@@ -23,7 +23,6 @@ def monom(monoms,k):
     b = random.randint(0,k)
    unL.append (a)
    unL.append (b)
-   print (unL)
    monoms.append(unL)
 
 
@@ -35,12 +34,10 @@ def sum_of_monoms(monoms,couficients_of_monoms,degrees_of_monoms_for_sum_of_mono
       continue
     c=monoms[i][0]
     d=monoms[i][1]
-    print (i,c)
     for j in range (i+1,len(monoms)):
         if ((monoms[i][1]==monoms[j][1])):
             c+=monoms[j][0]
             degrees_of_monoms_for_sum_of_monoms.append(monoms[j][1])
-            print (i,j,c) 
     couficients_of_monoms.append(c) 
     degrees_of_monoms.append(d)
 
@@ -141,30 +138,32 @@ def x(polynom):
  
 def couf(polynom):
   if ((polynom[i][0]==0) and (polynom[i][1])==0):
-     return ""
+     return ''
   elif ((polynom[i][0]==0) and (polynom[i][1])==1):
-     return ""
+     return ''
   elif ((polynom[i][0]==1) and (polynom[i][1])==0):
-     return ""
+     return "1"
   elif ((polynom[i][0]==1) and (polynom[i][1])==1):
-     return ""
+     return ''
   elif ((polynom[i][0]>1) and (polynom[i][1])==0):
      return str(polynom[i][0])
   elif ((polynom[i][0]>1)and (polynom[i][1])==1):
      return str(polynom[i][0])
-  elif ((polynom[i][0]==0) and (polynom[i][0]>1)):
-     return ""
-  elif ((polynom[i][0]==1) and (polynom[i][0])>1):
-     return ""
-  elif ((polynom[i][0]>1) and (polynom[i][0])>1):
+  elif ((polynom[i][0]==0) and (polynom[i][1]>1)):
+     return ''
+  elif ((polynom[i][0]==1) and (polynom[i][1])>1):
+     return ''
+  elif ((polynom[i][0]>1) and (polynom[i][1])>1):
      return str(polynom[i][0])
 
 
 
 
 def plus(polynom):
-    if (i!=len(polynom)-1):
+    if ((i!=len(polynom)-1) and (polynom[i][0]!=0)):
         return (" + ")
+    elif ((i==len(polynom)-2) and (polynom[len(polynom)-1][0]==0)):
+      return ('')
     else: 
         return ('')
 
@@ -207,41 +206,7 @@ for i in range (0, int(k)+1):
 
 
 
-print ("")
-
-
-
-
-print (monoms)
-
-
-
-
-print ("")
-
-
-
-
-print ("")
-
-
-
-
 sum_of_monoms(monoms,couficients_of_monoms,degrees_of_monoms_for_sum_of_monoms,degrees_of_monoms)
-
-print ("")
-
-print (monoms)
-
-print ("")
-
-print (couficients_of_monoms)
-
-print ("")
-
-print (degrees_of_monoms)
-
-print ("")
 
 
 
@@ -263,18 +228,14 @@ for i in range (0, len(polynom)):
 
 
 
-print (polynom)
-
-
-
-
-print ("")
+print(" ")
 
 
 
 
 for i in range (0,len(polynom)):
-    print (f'{couf(polynom)}{x(polynom)}{voz(polynom)}{deg(polynom)}{plus(polynom)}',end = " ")
+    if (polynom[i][0]):
+     print (f'{couf(polynom)}{x(polynom)}{voz(polynom)}{deg(polynom)}{plus(polynom)}',end = " ")
     if (i==len(polynom)-1):
          print ("= 0")
 print()
@@ -288,7 +249,8 @@ data = open('for 4 of 4.txt','w')
 
 
 for i in range (0,len(polynom)):
-  data.write(couf(polynom))
+  if ((couf(polynom)!='') or (polynom[i][0]!=0)):
+     data.write(couf(polynom))
   data.write(x(polynom))
   data.write(voz(polynom))
   data.write(deg(polynom))
