@@ -193,77 +193,95 @@ degrees_of_monoms_for_sum_of_monoms=[]
 polynom=[]
 
 
-
-
-k = random.randint(0,10)
-
+n=0
 
 
 
-for i in range (0, int(k)+1):
- monom(monoms,k)
+for i in range (0, 2):
 
 
-
-
-sum_of_monoms(monoms,couficients_of_monoms,degrees_of_monoms_for_sum_of_monoms,degrees_of_monoms)
+ k = random.randint(0,10)
 
 
 
 
-for i in range (0, len(degrees_of_monoms)):
+ for i in range (0, int(k)+1):
+  monom(monoms,k)
+
+
+
+
+ sum_of_monoms(monoms,couficients_of_monoms,degrees_of_monoms_for_sum_of_monoms,degrees_of_monoms)
+
+
+
+
+ for i in range (0, len(degrees_of_monoms)):
     forming_of_polynom(couficients_of_monoms[i],degrees_of_monoms[i],polynom)
 
 
 
 
-sort_of_polynom_by_low_index(polynom)
+ sort_of_polynom_by_low_index(polynom)
 
 
 
 
-for i in range (0, len(polynom)):
+ for i in range (0, len(polynom)):
     polynom[i][0]=random.randint(0,100)
 
 
 
 
-print(" ")
+ print(" ")
 
 
 
 
-for i in range (0,len(polynom)):
+ for i in range (0,len(polynom)):
     if (polynom[i][0]):
      print (f'{couf(polynom)}{x(polynom)}{voz(polynom)}{deg(polynom)}{plus(polynom)}',end = " ")
     if (i==len(polynom)-1):
          print ("= 0")
-print()
+ print()
 
 
 
 
-data = open('for 4 of 4.txt','w')
 
-
-
-
-for i in range (0,len(polynom)):
-  if ((couf(polynom)!='') or (polynom[i][0]!=0)):
-     data.write(couf(polynom))
-  data.write(x(polynom))
-  data.write(voz(polynom))
-  data.write(deg(polynom))
-  data.write(plus(polynom))
-  if (i==len(polynom)-1):
+ if (n==2):
+    data = open('1 for 5 of 4.txt','w')
+    for i in range (0,len(polynom)):
+       if ((couf(polynom)!='') or (polynom[i][0]!=0)):
+          data.write(couf(polynom))
+       data.write(x(polynom))
+       data.write(voz(polynom))
+       data.write(deg(polynom))
+       data.write(plus(polynom))
+       if (i==len(polynom)-1):
          data.write (" = 0")
+         
+    data.close()
+    exit()
 
 
 
 
-data.close()
+ elif (n==1):
+    data = open('2 for 5 of 4.txt','w')
+    for i in range (0,len(polynom)):
+       if ((couf(polynom)!='') or (polynom[i][0]!=0)):
+            data.write(couf(polynom))
+            data.write(x(polynom))
+            data.write(voz(polynom))
+            data.write(deg(polynom))
+            data.write(plus(polynom))
+       if (i==len(polynom)-1):
+         data.write (" = 0")
+    data.close()
+    exit()
 
 
 
 
-exit()
+ n+=1
